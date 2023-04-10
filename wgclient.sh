@@ -49,7 +49,7 @@ IP=$(ip -brief address show eth0 | grep -oP '\b(\d{1,3}\.){3}\d{1,3}\b' | head -
 
 
 # Create the WireGuard peer configuration file
-sudo bash -c "cat > wg0-client.conf << EOL
+sudo bash -c "cat > /etc/wireguard/wg0-client.conf << EOL
 [Interface]
 PrivateKey = ${client_private_key}
 Address = ${clientIP}
