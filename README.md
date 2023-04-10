@@ -26,3 +26,12 @@ Make sure that you have the ability to access the droplets ip and droplets publi
 ```bash
 sudo wg set wg0 peer (CLIENT PUBLIC KEY) allowed-ips (CLIENT IP)
 ```
+### Connecting to the VPN
+```bash
+sudo wg-quick up wg0
+```
+
+### Disconnecting from the VPN
+```bash
+sudo wg-quick down wg0
+```
